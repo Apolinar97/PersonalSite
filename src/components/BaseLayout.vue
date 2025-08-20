@@ -8,8 +8,23 @@
           Apolinar Camacho & Miffy
         </div>
 
-        <!-- Navigation Links -->
-        <div class="flex gap-6 text-lg font-medium text-white">
+        <!-- Hamburger (mobile only) -->
+        <button
+          class="md:hidden text-white focus:outline-none p-2 rounded hover:bg-white/10 focus:ring-2 focus:ring-white"
+          @click="toggleMenu"
+          aria-label="Toggle menu"
+          :aria-expanded="isOpen.toString()"
+          aria-controls="mobile-nav-overlay"
+        >
+          <!-- Hamburger Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex gap-6 text-lg font-medium text-white md:items-center">
           <RouterLink :to="'/'" :class="navLinkClass('/')">Home</RouterLink>
           <RouterLink :to="'/about'" :class="navLinkClass('/about')">About</RouterLink>
           <RouterLink :to="'/projects'" :class="navLinkClass('/projects')">Projects</RouterLink>
@@ -24,57 +39,58 @@
     </main>
 
     <!-- Footer -->
-   <!-- Footer -->
-<footer class="bg-cyan-900 text-white py-4 px-6 flex items-center justify-between">
-  <!-- Social Icons -->
-  <div class="flex gap-4">
-    <a
-      href="https://github.com/yourusername"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="GitHub"
-      class="hover:text-cyan-300 transition-colors"
-    >
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.28 3.438 9.747 8.207 11.324.6.113.793-.26.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.839 1.238 1.839 1.238 1.07 1.832 2.809 1.303 3.495.996.108-.774.419-1.303.762-1.602-2.665-.304-5.466-1.334-5.466-5.931 0-1.311.469-2.382 1.237-3.222-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.505 11.505 0 0 1 3.003-.403c1.018.004 2.045.138 3.002.403 2.292-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.236 1.911 1.236 3.222 0 4.609-2.805 5.625-5.475 5.922.43.371.814 1.102.814 2.222v3.293c0 .32.192.694.8.576C20.565 22.04 24 17.577 24 12.297 24 5.67 18.627 0.297 12 0.297z"
-        />
-      </svg>
-    </a>
+    <footer class="bg-cyan-900 text-white py-4 px-6 flex justify-between items-center">
+      <p class="text-sm">&copy; {{ currentYear }} Apolinar Camacho. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://github.com/apolinar97" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hover:text-cyan-300 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.09.66-.22.66-.48v-1.69c-2.78.61-3.37-1.36-3.37-1.36-.45-1.17-1.1-1.49-1.1-1.49-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.04 1.02-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.75 1.04a9.27 9.27 0 0 1 2.5-.35c.85 0 1.7.11 2.5.35 1.9-1.3 2.74-1.04 2.74-1.04.55 1.41.2 2.46.1 2.72.63.71 1.02 1.63 1.02 2.75 0 3.95-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9v2.82c0 .26.16.58.67.48A10.2 10.2 0 0 0 22 12.2C22 6.58 17.52 2 12 2Z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/apolinar-camacho-06560b1a1/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hover:text-cyan-300 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96zM3 9h4v12H3zm7.34 0h3.86v1.71h.05c.54-1 1.86-2.04 3.83-2.04 4.09 0 4.84 2.69 4.84 6.18V21h-4v-5.19c0-1.24-.03-2.84-1.73-2.84-1.73 0-2 1.35-2 2.74V21h-4z"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
 
-    <a
-      href="https://linkedin.com/in/yourusername"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="LinkedIn"
-      class="hover:text-cyan-300 transition-colors"
-    >
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M22.23 0H1.77C.79 0 0 .774 0 1.727v20.545C0 23.227.79 24 1.77 24h20.46C23.21 24 24 23.227 24 22.273V1.727C24 .774 23.21 0 22.23 0zM7.081 20.452H3.542V9.045h3.539v11.407zM5.311 7.587c-1.134 0-2.053-.927-2.053-2.068 0-1.14.919-2.067 2.053-2.067 1.135 0 2.054.927 2.054 2.067 0 1.141-.919 2.068-2.054 2.068zm15.141 12.865h-3.539v-5.553c0-1.325-.027-3.03-1.847-3.03-1.85 0-2.134 1.445-2.134 2.934v5.649h-3.538V9.045h3.396v1.561h.048c.472-.893 1.627-1.834 3.348-1.834 3.582 0 4.24 2.358 4.24 5.424v6.256z"
-        />
-      </svg>
-    </a>
-  </div>
-
-  <!-- Footer Text -->
-  <p class="text-sm text-white text-center w-full">
-    &copy; {{ currentYear }} Apolinar Camacho. All rights reserved.
-  </p>
-</footer>
+    <!-- Mobile Overlay -->
+    <MobileNavOverlay
+      id="mobile-nav-overlay"
+      :open="isOpen"
+      :routes="routes"
+      @close="isOpen = false"
+    />
   </div>
 </template>
 
 <script setup>
+import { ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import MobileNavOverlay from '@/components/MobileNavOverlay.vue' // NOTE: default import
 
 const route = useRoute()
+const isOpen = ref(false)
+const toggleMenu = () => { isOpen.value = !isOpen.value }
 
+// Close overlay whenever route changes
+watch(() => route.fullPath, () => { isOpen.value = false })
+
+// Desktop link styling
 const navLinkClass = (path) => {
   return route.path === path
     ? 'text-cyan-100 underline'
     : 'hover:text-cyan-300 transition-colors'
 }
+
+// Provide routes to overlay
+const routes = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/contact', label: 'Contact' },
+]
 
 const currentYear = new Date().getFullYear()
 </script>
