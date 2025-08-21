@@ -53,7 +53,7 @@
 
 <script setup>
 import SkillsGrid from '../components/SkillsGrid.vue'
-const resumeUrl = `${import.meta.env.BASE_URL}Apolinar_Camacho_Resume.pdf`
+const resumeUrl = import.meta.env.VITE_RESUME_URL
 const skills = [
   { label: 'Apache Spark' },
   { label: 'Python' },
