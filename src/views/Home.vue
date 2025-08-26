@@ -14,31 +14,19 @@
 
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a
-          :href="resumeUrl"
-          download="Apolinar_Camacho_Resume.pdf"
-          class="inline-flex items-center rounded-xl bg-cyan-900 px-5 py-3 text-white font-medium
+        <a :href="resumeUrl" target="_blank" class="inline-flex items-center rounded-xl bg-cyan-900 px-5 py-3 text-white font-medium
                  hover:bg-cyan-800 transition focus-visible:outline-none focus-visible:ring-2
-                 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
-          aria-label="Download my resume (PDF)"
-        >
-          Download Resume
+                 focus-visible:ring-cyan-500 focus-visible:ring-offset-2" aria-label="Download my resume (PDF)">
+          View Resume
         </a>
-  <button @click="console.log(resumeUrl)">test</button>
-        <RouterLink
-          to="/projects"
-          class="group inline-flex items-center rounded-xl border px-5 py-3 font-medium
+        <RouterLink to="/projects" class="group inline-flex items-center rounded-xl border px-5 py-3 font-medium
                  text-cyan-900 border-cyan-900 hover:bg-cyan-50 transition
                  focus-visible:outline-none focus-visible:ring-2
-                 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
-          aria-label="View my projects"
-        >
+                 focus-visible:ring-cyan-500 focus-visible:ring-offset-2" aria-label="View my projects">
           View Projects
-          <svg
-            class="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-          >
+          <svg class="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
             <path d="M5 12h14" />
             <path d="M12 5l7 7-7 7" />
           </svg>
