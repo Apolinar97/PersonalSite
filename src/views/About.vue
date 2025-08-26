@@ -1,5 +1,5 @@
 <script setup>
-const headshot =  '/public/Apolinar_Pro_Pic.jpg'
+import headshot from '@/assets/Apolinar_Pro_Pic.jpg'
 </script>
 
 <template>
