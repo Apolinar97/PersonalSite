@@ -1,5 +1,5 @@
 <script setup>
-import headshot from '@/assets/Apolinar_Pro_Pic.jpg'
+import headshot from '@/assets/headshot.jpg'
 </script>
 
 <template>
