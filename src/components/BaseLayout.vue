@@ -5,7 +5,7 @@
       <nav class="px-6 py-4 flex items-center justify-between w-full">
         <!-- Logo / Site Name -->
         <div class="text-2xl font-bold tracking-wide text-white flex-grow">
-          Apolinar Camacho & Miffy
+          Camacho.dev
         </div>
 
         <!-- Hamburger (mobile only) -->
