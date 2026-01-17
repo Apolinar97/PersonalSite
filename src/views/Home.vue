@@ -4,13 +4,12 @@
     <!-- HERO (buttons inside, tighter spacing/height) -->
     <div class="flex flex-col items-center text-center space-y-5 min-h-[30vh] md:min-h-[34vh]">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
-        Hi I’m Apolinar, a developer focused on data engineering and analytics.
+        Hi, I'm Apolinar
       </h1>
 
       <p class="text-lg md:text-xl text-gray-600 max-w-2xl">
-        Whether it’s designing pipelines or crafting dashboards, I focus on turning
-        data into insights people can use.
-      </p>
+        A .NET developer with strong SQL experience, focused on backend systems and data pipelines, expanding into data
+        engineering.. </p>
 
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -43,12 +42,12 @@
 import SkillsGrid from '../components/SkillsGrid.vue'
 const resumeUrl = import.meta.env.VITE_RESUME_URL
 const skills = [
-  { label: 'Apache Spark' },
-  { label: 'Python' },
-  { label: 'Dot Net' },
-  { label: 'SQL Server' },
-  { label: 'PostgreSQL' },
-  { label: 'Power BI' },
-  { label: 'DAX' },
+  { label: '.NET Core', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg' },
+  { label: 'C#',  iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' },
+  { label: 'Python',  iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+  { label: 'SQL Server',  iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg' },
+  { label: 'Power BI',  iconUrl: 'https://logo.svgcdn.com/logos/microsoft-power-bi.svg' },
+  { label: "Git",  iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
+  {label: "Apache Airflow", iconUrl:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original-wordmark.svg'}
 ]
 </script>
