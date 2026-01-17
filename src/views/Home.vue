@@ -9,7 +9,7 @@
 
       <p class="text-lg md:text-xl text-gray-600 max-w-2xl">
         A .NET developer with strong SQL experience, focused on backend systems and data pipelines, expanding into data
-        engineering.. </p>
+        engineering.</p>
 
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -34,7 +34,7 @@
     </div>
 
     <!-- SKILLS -->
-    <SkillsGrid class="mt-16 md:mt-20" :items="skills" />
+    <SkillsGrid class="mt-10 md:mt-14" :items="skills" />
   </section>
 </template>
 
