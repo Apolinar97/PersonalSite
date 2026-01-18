@@ -29,7 +29,13 @@ const routes = [
         path: '/projects/:slug',
         name: 'ProjectDetail',
         component: ProjectDetail
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => import('../views/NotFound.vue')
     }
+
 ]
 
 const router = createRouter({

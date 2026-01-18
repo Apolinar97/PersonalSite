@@ -52,26 +52,12 @@ export function useProjects() {
             projectData.technologies.map(tech => String(tech).trim()).filter(Boolean)
             : []
         const repositoryUrl = String(projectData.repository_url ?? '').trim()
-        const rawSlug = slugify(projectName)
-        const projectPageSlug = uniqueSlug(rawSlug)
+        const projectPageSlug = String(projectData.slug ?? '').trim()
         return { projectName, description, technologies, repositoryUrl, projectPageSlug }
     }
     const normalizeProjectDataList = (projectDataList) => {
         const projectArr = Array.isArray(projectDataList) ? projectDataList : []
         return projectArr.map(normalizeProjectData)
-    }
-    const slugify = (s) =>
-        String(s ?? '')
-            .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
-            .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-            .slice(0, 60) // optional max length
-
-    const used = new Set()
-    const uniqueSlug = (base) => {
-        let s = base, i = 2
-        while (used.has(s)) s = `${base}-${i++}`
-        used.add(s)
-        return s
     }
     const loadProjects = async (force = false) => {
         try {

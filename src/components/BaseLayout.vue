@@ -4,9 +4,12 @@
     <header class="bg-cyan-900 text-white shadow-md">
       <nav class="px-6 py-4 flex items-center justify-between w-full">
         <!-- Logo / Site Name -->
-        <div class="text-2xl font-bold tracking-wide text-white flex-grow">
+        <!-- <div class="text-2xl font-bold tracking-wide text-white flex-grow">
           Camacho.dev
-        </div>
+        </div> -->
+        <RouterLink to="/" class="text-2xl font-bold tracking-wide text-white flex-grow hover:text-cyan-200 transition-colors">
+          Camacho.dev
+        </RouterLink>
 
         <!-- Hamburger (mobile only) -->
         <button
