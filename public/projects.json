@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "ecommerce-etl-pipeline",
+    "project_name": "E-Commerce ETL Pipeline",
+    "description": "An end-to-end ETL pipeline for processing e-commerce data, including data extraction, transformation, and loading into a data warehouse.",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "SQL",
+      "Airflow"
+    ],
+    "repository_url": "https://github.com/Apolinar97/ecommerce-etl-pipeline",
+    "writeup_file": "ecommerce-etl-pipeline.md"
+  }
+]
