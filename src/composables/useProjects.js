@@ -52,8 +52,8 @@ export function useProjects() {
             projectData.technologies.map(tech => String(tech).trim()).filter(Boolean)
             : []
         const repositoryUrl = String(projectData.repository_url ?? '').trim()
-        const projectPageSlug = String(projectData.slug ?? '').trim()
-        return { projectName, description, technologies, repositoryUrl, projectPageSlug }
+        const slug = String(projectData.slug ?? '').trim()
+        return { projectName, description, technologies, repositoryUrl, slug }
     }
     const normalizeProjectDataList = (projectDataList) => {
         const projectArr = Array.isArray(projectDataList) ? projectDataList : []

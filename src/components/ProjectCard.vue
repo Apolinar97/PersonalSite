@@ -28,7 +28,7 @@
           <path d="M12 5l7 7-7 7" />
         </svg>
       </a>
-       <a v-if="project.projectPageSlug" :href="`/projects/${project.projectPageSlug}`" class="inline-flex items-center text-cyan-900 text-sm font-medium
+       <a v-if="project.slug" :href="`/projects/${project.slug}`" class="inline-flex items-center text-cyan-900 text-sm font-medium
                outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded">
       Read More
         <svg class="ml-1.5 h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" viewBox="0 0 24 24"
