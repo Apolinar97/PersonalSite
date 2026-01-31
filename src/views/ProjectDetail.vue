@@ -91,11 +91,11 @@ const mdFiles = import.meta.glob('/src/content/projects/*.md', { as: 'raw' });
 
 const mdRaw = ref('');
 const mdError = ref(false);
+
 const getMarkdownLoader = (slug) => {
   const entry = Object.entries(mdFiles).find(([key]) =>
     key.endsWith(`/${slug}.md`)
   )
-  console.log('Markdown loader for slug:', slug, entry?.[1]);
   return entry?.[1]
 }
 watchEffect(async () => {
@@ -105,9 +105,6 @@ watchEffect(async () => {
   mdError.value = false;
 
   const slug = String(route.params.slug || '');
-
-  // const path = `/src/content/projects/${slug}.md`;
-  // const loader = mdFiles[path];
   const loader = getMarkdownLoader(slug);
 
 
