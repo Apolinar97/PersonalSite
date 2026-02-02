@@ -7,7 +7,7 @@
         404 - Page Not Found
       </h1>
 
-      <p class="mt-4 text-lg text-gray-600">
+      <p class="mt-4 text-base md:text-lg text-gray-600">
         The link may be broken, or the page may have been moved.
       </p>
 

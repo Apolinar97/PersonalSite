@@ -53,15 +53,23 @@ export function useProjects() {
             : []
         const repositoryUrl = String(projectData.repository_url ?? '').trim()
         const slug = String(projectData.slug ?? '').trim()
-        return { projectName, description, technologies, repositoryUrl, slug }
+        const projectLastUpdated = String(projectData.project_last_updated ?? '').trim()
+        return { projectName, description, technologies, repositoryUrl, slug, projectLastUpdated }
     }
     const normalizeProjectDataList = (projectDataList) => {
         const projectArr = Array.isArray(projectDataList) ? projectDataList : []
-        return projectArr.map(normalizeProjectData)
+        return projectArr
+            .map(normalizeProjectData)
+            .sort((projectA, projectB) => {
+                const dateA = projectA.projectLastUpdated || '0000-00-00'
+                const dateB = projectB.projectLastUpdated || '0000-00-00'
+                return dateB.localeCompare(dateA)
+            })
     }
     const loadProjects = async (force = false) => {
         try {
             loading.value = true
+            error.value = null
             // Check cache and return if valid
             if (!force && !projects.value.length) {
                 const cached = readCache()
@@ -83,8 +91,9 @@ export function useProjects() {
             writeCache(normalizedData)
 
         }
-        catch (error) {
-            console.error('Fetch failed for project data:', error)
+        catch (err) {
+            console.error('Fetch failed for project data:', err)
+            error.value = err?.message || 'Failed to load projects'
         } finally {
             loading.value = false
         }
@@ -94,10 +103,11 @@ export function useProjects() {
 
     //initial load
     loadProjects()
-
-
     return {
-        projects, loading, error
+        projects,
+        loading,
+        error,
+        reload: () => loadProjects(true),
     }
 
 

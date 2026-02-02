@@ -12,7 +12,7 @@ const copied = ref(false)
 const mailto = `mailto:${email}?subject=${encodeURIComponent('Hello Apolinar')}`
 
 async function copyEmail() {
-  try { await navigator.clipboard.writeText(email); copied.value = true; setTimeout(()=>copied.value=false, 1600) }
+  try { await navigator.clipboard.writeText(email); copied.value = true; setTimeout(()=>copied.value=false, 1000) }
   catch {}
 }
 </script>
@@ -25,19 +25,22 @@ async function copyEmail() {
       <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-800 leading-tight">
         Let’s get in touch
       </h1>
+      <p class="mt-2 text-base md:text-lg text-slate-600">
+        Happy to chat about roles, collaboration, or data-focused projects.
+      </p>
 
-      <div class="mt-3 h-1.5 w-24 rounded-full bg-gradient-to-r from-cyan-900 to-cyan-400"></div>
+      <div class="mt-3 h-1.5 w-24 rounded-full bg-gradient-to-r from-cyan-900 to-teal-400"></div>
     </header>
 
     
     <div class="mt-8">
-      <AvailabilityBar :roles="roles" :location="location" :note="note" />
+      <AvailabilityBar :roles="roles" :location="location"/>
     </div>
 
     <!-- your cards below unchanged -->
-    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-8 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
       <!-- Email card -->
-      <div class="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md">
+      <div class="group rounded-2xl border border-cyan-100/70 bg-white p-5 shadow-sm transition hover:shadow-md">
         <div class="flex items-start justify-between gap-4">
           <div class="min-w-0">
             <div class="flex items-center gap-2">
@@ -62,12 +65,19 @@ async function copyEmail() {
             <span class="ml-1">{{ copied ? 'Copied!' : 'Copy' }}</span>
           </button>
         </div>
-        <p class="sr-only" aria-live="polite">{{ copied ? 'Email copied to clipboard' : '' }}</p>
+        <p class="mt-2 text-xs text-slate-500 h-4" aria-live="polite">
+          <span
+            class="inline-block transition-opacity duration-500"
+            :class="copied ? 'opacity-100' : 'opacity-0'"
+          >
+            Copied to clipboard
+          </span>
+        </p>
       </div>
 
       <!-- LinkedIn card -->
-      <a :href="linkedin" target="_blank" rel="noopener"
-         class="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md
+      <a :href="linkedin" target="_blank" rel="noopener noreferrer"
+         class="group rounded-2xl border border-cyan-100/70 bg-white p-5 shadow-sm transition hover:shadow-md
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500">
         <div class="flex items-center justify-between gap-4">
           <div class="min-w-0">
@@ -84,8 +94,8 @@ async function copyEmail() {
       </a>
 
       <!-- GitHub card -->
-      <a :href="github" target="_blank" rel="noopener"
-         class="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md
+      <a :href="github" target="_blank" rel="noopener noreferrer"
+         class="group rounded-2xl border border-cyan-100/70 bg-white p-5 shadow-sm transition hover:shadow-md
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500">
         <div class="flex items-center justify-between gap-4">
           <div class="min-w-0">

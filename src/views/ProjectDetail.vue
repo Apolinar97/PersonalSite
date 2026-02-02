@@ -20,9 +20,11 @@
           {{ project.projectName }}
         </h1>
 
-        <!-- Project Description -->
-        <p v-if="project.description" class="text-lg text-gray-600 leading-relaxed mb-6">
-          {{ project.description }}
+        <p v-if="project.description" class="text-sm text-slate-600 mb-4">
+          <span class="inline-flex items-center rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-900">
+            TL;DR
+          </span>
+          <span class="ml-2 align-middle">{{ project.description }}</span>
         </p>
 
         <!-- Technologies -->
@@ -36,7 +38,7 @@
     </div>
 
     <!-- Markdown Content -->
-    <div class="mx-auto max-w-4xl px-6 py-12">
+    <div class="mx-auto max-w-4xl px-6 py-8">
       <div v-if="mdHtml" class="prose prose-lg prose-gray max-w-none
                prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
                prose-h1:text-3xl prose-h1:mt-8 prose-h1:mb-4

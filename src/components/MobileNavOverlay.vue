@@ -12,7 +12,7 @@
         <div class="absolute inset-0 bg-black/60" @click="$emit('close')" />
 
         <!-- Panel -->
-        <div class="absolute inset-0 bg-cyan-950 text-white flex flex-col">
+        <div class="absolute inset-0 bg-cyan-900 text-white flex flex-col">
           <!-- Header row with close (X) -->
           <div class="flex items-center justify-between p-6">
             <span class="text-xl font-semibold">Menu</span>
@@ -37,7 +37,7 @@
               v-for="item in routes"
               :key="item.to"
               :to="item.to"
-              class="block py-4 text-2xl border-t border-white/10 hover:text-cyan-300"
+              :class="navLinkClass(item.to)"
               @click="$emit('close')"
             >
               {{ item.label }}
@@ -50,8 +50,8 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
-import { defineProps, defineEmits, ref, watch, onUnmounted, nextTick } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
+import { defineProps, defineEmits, ref, watch, onMounted, onUnmounted, nextTick } from 'vue'
 
 const props = defineProps({
   open: { type: Boolean, default: false },
@@ -67,12 +67,26 @@ const props = defineProps({
 })
 const emit = defineEmits(['close'])
 const closeBtn = ref(null)
+const route = useRoute()
+let mediaQuery = null
+
+const onResize = () => {
+  if (mediaQuery?.matches) emit('close')
+}
+
+const navLinkClass = (path) => {
+  const base = 'block px-4 py-3 text-lg border-t border-white/10 rounded-lg transition-colors'
+  return route.path === path
+    ? `${base} bg-white/10 text-white`
+    : `${base} hover:text-cyan-300`
+}
 
 // Close on Escape
 const onKey = (e) => { if (e.key === 'Escape') emit('close') }
 watch(() => props.open, async (v) => {
   if (v) {
     window.addEventListener('keydown', onKey)
+    window.addEventListener('resize', onResize)
     // focus the close button for accessibility
     await nextTick()
     closeBtn.value?.focus()
@@ -80,12 +94,19 @@ watch(() => props.open, async (v) => {
     document.documentElement.style.overflow = 'hidden'
   } else {
     window.removeEventListener('keydown', onKey)
+    window.removeEventListener('resize', onResize)
     document.documentElement.style.overflow = ''
   }
 })
 
+onMounted(() => {
+  mediaQuery = window.matchMedia('(min-width: 768px)')
+  if (mediaQuery.matches) emit('close')
+})
+
 onUnmounted(() => {
   window.removeEventListener('keydown', onKey)
+  window.removeEventListener('resize', onResize)
   document.documentElement.style.overflow = ''
 })
 </script>

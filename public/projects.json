@@ -10,6 +10,20 @@
       "Airflow"
     ],
     "repository_url": "https://github.com/Apolinar97/ecommerce-etl-pipeline",
-    "writeup_file": "ecommerce-etl-pipeline.md"
+    "writeup_file": "ecommerce-etl-pipeline.md",
+    "project_last_updated": "2026-01-31"
+  },
+  {
+    "slug": "personal-portfolio-site",
+    "project_name": "Personal Portfolio Site",
+    "description": "A responsive personal website showcasing projects, skills, and contact info with a clean UI and fast load times.",
+    "technologies": [
+      "Vue",
+      "Vite",
+      "Tailwind CSS"
+    ],
+    "repository_url": "https://github.com/Apolinar97/personal_site",
+    "writeup_file": "personal-portfolio-site.md",
+    "project_last_updated": "2026-02-01"
   }
 ]

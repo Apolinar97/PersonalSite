@@ -1,6 +1,6 @@
 <template>
   <article class="group h-full rounded-2xl border border-gray-200 bg-white p-5 transition
-           hover:shadow-md focus-within:shadow-md">
+           hover:shadow-md focus-within:shadow-md hover:-translate-y-0.5 focus-within:-translate-y-0.5">
     <h3 class="text-lg font-semibold text-gray-900">
       {{ project.projectName }}
     </h3>
@@ -18,7 +18,7 @@
     </ul>
 
     <div class="mt-4 flex items-center gap-6">
-      <a v-if="project.repositoryUrl" :href="project.repositoryUrl" target="_blank" rel="noopener" class="inline-flex items-center text-cyan-900 text-sm font-medium
+      <a v-if="project.repositoryUrl" :href="project.repositoryUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-cyan-900 text-sm font-medium
                outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded">
         View Repository
         <svg class="ml-1.5 h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" viewBox="0 0 24 24"

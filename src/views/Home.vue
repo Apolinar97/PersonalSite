@@ -1,19 +1,19 @@
 <!-- Home.vue -->
 <template>
-  <section class="mx-auto max-w-6xl px-6 py-16">
+  <section class="mx-auto max-w-6xl px-6 py-12">
     <!-- HERO (buttons inside, tighter spacing/height) -->
-    <div class="flex flex-col items-center text-center space-y-5 min-h-[30vh] md:min-h-[34vh]">
+    <div class="flex flex-col items-center text-center space-y-3">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
         Hi, I'm Apolinar
       </h1>
 
-      <p class="text-lg md:text-xl text-gray-600 max-w-2xl">
+      <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl md:max-w-2xl">
         A .NET developer with strong SQL experience, focused on backend systems and data pipelines, expanding into data
         engineering.</p>
 
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a :href="resumeUrl" target="_blank" class="inline-flex items-center rounded-xl bg-cyan-900 px-5 py-3 text-white font-medium
+        <a :href="resumeUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-xl bg-cyan-900 px-5 py-3 text-white font-medium
                  hover:bg-cyan-800 transition focus-visible:outline-none focus-visible:ring-2
                  focus-visible:ring-cyan-500 focus-visible:ring-offset-2" aria-label="Download my resume (PDF)">
           View Resume
@@ -33,8 +33,11 @@
       </div>
     </div>
 
+    <!-- Divider -->
+    <div class="mt-6 md:mt-7 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-teal-200 to-transparent"></div>
+
     <!-- SKILLS -->
-    <SkillsGrid class="mt-10 md:mt-14" :items="skills" />
+    <SkillsGrid class="mt-5 md:mt-6" :items="skills" />
   </section>
 </template>
 

@@ -4,7 +4,6 @@
            flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
     aria-label="Availability"
   >
-    <!-- Left: badge + optional note -->
     <div class="flex items-center gap-3">
       <span
         class="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-900
