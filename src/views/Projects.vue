@@ -1,6 +1,6 @@
 <template>
-  <section class="mx-auto max-w-6xl px-6 py-16">
-    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-8">Projects</h1>
+  <section class="mx-auto max-w-6xl px-6 py-12">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">Projects</h1>
     <div v-if="loading">Loading projects…</div>
     <div v-else-if="error" class="text-red-600">
       Error: {{ error }}

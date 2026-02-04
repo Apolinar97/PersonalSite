@@ -18,7 +18,7 @@ async function copyEmail() {
 </script>
 
 <template>
-  <section class="relative mx-auto max-w-6xl px-6 py-16">
+  <section class="relative mx-auto max-w-6xl px-6 py-12">
     <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-cyan-50 to-transparent"></div>
 
     <header class="max-w-prose">
@@ -33,12 +33,12 @@ async function copyEmail() {
     </header>
 
     
-    <div class="mt-8">
+    <div class="mt-6">
       <AvailabilityBar :roles="roles" :location="location"/>
     </div>
 
     <!-- your cards below unchanged -->
-    <div class="mt-8 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-6 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
       <!-- Email card -->
       <div class="group rounded-2xl border border-cyan-100/70 bg-white p-5 shadow-sm transition hover:shadow-md">
         <div class="flex items-start justify-between gap-4">

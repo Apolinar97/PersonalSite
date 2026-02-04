@@ -4,9 +4,9 @@
   <article v-else class="min-h-screen bg-gray-50">
     <!-- Hero Section -->
     <div class="bg-white border-b border-gray-200">
-      <div class="mx-auto max-w-4xl px-6 py-12 md:py-16">
+      <div class="mx-auto max-w-4xl px-6 py-10 md:py-12">
         <!-- Back Button -->
-        <RouterLink to="/projects" class="inline-flex items-center gap-2 text-cyan-900 hover:text-cyan-700 transition-colors mb-6 group font-medium text-sm
+        <RouterLink to="/projects" class="inline-flex items-center gap-2 text-cyan-900 hover:text-cyan-700 transition-colors mb-4 group font-medium text-sm
          outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded">
           <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor"
             viewBox="0 0 24 24" stroke-width="2">
@@ -16,11 +16,11 @@
         </RouterLink>
 
         <!-- Project Title -->
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-4">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-3">
           {{ project.projectName }}
         </h1>
 
-        <p v-if="project.description" class="text-sm text-slate-600 mb-4">
+        <p v-if="project.description" class="text-sm text-slate-600 mb-3">
           <span class="inline-flex items-center rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-900">
             TL;DR
           </span>
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Markdown Content -->
-    <div class="mx-auto max-w-4xl px-6 py-8">
+    <div class="mx-auto max-w-4xl px-6 py-6">
       <div v-if="mdHtml" class="prose prose-lg prose-gray max-w-none
                prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
                prose-h1:text-3xl prose-h1:mt-8 prose-h1:mb-4
@@ -54,9 +54,9 @@
                prose-blockquote:border-l-4 prose-blockquote:border-cyan-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-600
                prose-img:rounded-xl prose-img:shadow-md prose-img:my-8
                prose-hr:my-8 prose-hr:border-gray-200
-               bg-white rounded-2xl border border-gray-200 shadow-sm p-8 md:p-12" v-html="mdHtml" />
+               bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8" v-html="mdHtml" />
 
-      <div v-else-if="mdError" class="bg-white rounded-2xl border border-gray-200 p-8 text-center">
+      <div v-else-if="mdError" class="bg-white rounded-2xl border border-gray-200 p-6 text-center">
         <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
           stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -65,7 +65,7 @@
         <p class="text-sm text-gray-600">Unable to load project details for this project.</p>
       </div>
 
-      <div v-else class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 md:p-12">
+      <div v-else class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8">
         <div class="animate-pulse space-y-4">
           <div class="h-4 bg-gray-200 rounded w-3/4"></div>
           <div class="h-4 bg-gray-200 rounded w-full"></div>

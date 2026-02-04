@@ -2,12 +2,12 @@
 <template>
   <section class="mx-auto max-w-6xl px-6 py-12">
     <!-- HERO (buttons inside, tighter spacing/height) -->
-    <div class="flex flex-col items-center text-center space-y-3">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+    <div class="flex flex-col items-center text-center space-y-2">
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">
         Hi, I'm Apolinar
       </h1>
 
-      <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl md:max-w-2xl">
+      <p class="text-base md:text-[17px] text-gray-600 max-w-xl md:max-w-2xl">
         A .NET developer with strong SQL experience, focused on backend systems and data pipelines, expanding into data
         engineering.</p>
 
@@ -34,10 +34,10 @@
     </div>
 
     <!-- Divider -->
-    <div class="mt-6 md:mt-7 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-teal-200 to-transparent"></div>
+    <div class="mt-5 md:mt-6 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-teal-200 to-transparent"></div>
 
     <!-- SKILLS -->
-    <SkillsGrid class="mt-5 md:mt-6" :items="skills" />
+    <SkillsGrid class="mt-4 md:mt-5" :items="skills" />
   </section>
 </template>
 

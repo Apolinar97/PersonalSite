@@ -85,7 +85,6 @@ export function useProjects() {
             }
 
             const freshData = await fetchJson(projectDataUrl)
-            console.log('Fetched project data:', freshData)
             const normalizedData = normalizeProjectDataList(freshData)
             projects.value = normalizedData
             writeCache(normalizedData)
@@ -109,6 +108,4 @@ export function useProjects() {
         error,
         reload: () => loadProjects(true),
     }
-
-
 }
