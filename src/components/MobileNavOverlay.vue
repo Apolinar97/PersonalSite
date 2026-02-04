@@ -12,7 +12,7 @@
         <div class="absolute inset-0 bg-black/60" @click="$emit('close')" />
 
         <!-- Panel -->
-        <div class="absolute inset-0 bg-cyan-900 text-white flex flex-col">
+        <div class="absolute inset-0 bg-[#1F1F1F] text-white flex flex-col">
           <!-- Header row with close (X) -->
           <div class="flex items-center justify-between p-6">
             <span class="text-xl font-semibold">Menu</span>
@@ -77,8 +77,8 @@ const onResize = () => {
 const navLinkClass = (path) => {
   const base = 'block px-4 py-3 text-lg border-t border-white/10 rounded-lg transition-colors'
   return route.path === path
-    ? `${base} bg-white/10 text-white`
-    : `${base} hover:text-cyan-300`
+    ? `${base} bg-[#3A6FF7] text-white`
+    : `${base} hover:text-[#A0A4A8]`
 }
 
 // Close on Escape

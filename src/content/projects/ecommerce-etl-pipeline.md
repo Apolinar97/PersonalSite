@@ -58,7 +58,3 @@ Future enhancements planned:
 - **Monitoring**: Implement Grafana dashboards for pipeline observability
 - **Data lineage**: Track data flow end-to-end for compliance
 - **Testing**: Expand unit test coverage to 90%+
-
-## Technologies Used
-
-Python • Apache Airflow • PostgreSQL • Docker • Pandas • SQLAlchemy • Redis • AWS S3

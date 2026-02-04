@@ -24,7 +24,3 @@ I needed a single, modern place to present projects and experience that looks po
 - Add more project case studies.
 - Refine copy and visuals.
 - Add a blog or writing section.
-
-## Technologies Used
-
-Vue • Vite • Tailwind CSS

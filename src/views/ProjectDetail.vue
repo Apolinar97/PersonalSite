@@ -1,13 +1,13 @@
 <template>
   <NotFound v-if="!project" />
 
-  <article v-else class="min-h-screen bg-gray-50">
+  <article v-else class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <div class="bg-white border-b border-gray-200">
-      <div class="mx-auto max-w-4xl px-6 py-10 md:py-12">
+    <div class="bg-white border-b border-[#A0A4A8]/30">
+      <div class="mx-auto max-w-4xl px-6 py-12 md:py-16">
         <!-- Back Button -->
-        <RouterLink to="/projects" class="inline-flex items-center gap-2 text-cyan-900 hover:text-cyan-700 transition-colors mb-4 group font-medium text-sm
-         outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded">
+        <RouterLink to="/projects" class="inline-flex items-center gap-2 text-[#3A6FF7] hover:text-[#2F5FE0] transition-colors mb-6 group font-medium text-sm
+         outline-none focus-visible:ring-2 focus-visible:ring-[#3A6FF7] rounded">
           <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor"
             viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
@@ -16,12 +16,12 @@
         </RouterLink>
 
         <!-- Project Title -->
-        <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-3">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#1F1F1F] mb-4">
           {{ project.projectName }}
         </h1>
 
-        <p v-if="project.description" class="text-sm text-slate-600 mb-3">
-          <span class="inline-flex items-center rounded-full border border-emerald-100 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-900">
+        <p v-if="project.description" class="text-sm text-[#A0A4A8] mb-4">
+          <span class="inline-flex items-center rounded-full border border-[#3A6FF7]/20 bg-[#3A6FF7]/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#1F1F1F]">
             TL;DR
           </span>
           <span class="ml-2 align-middle">{{ project.description }}</span>
@@ -30,7 +30,7 @@
         <!-- Technologies -->
         <ul v-if="project.technologies && project.technologies.length" class="flex flex-wrap gap-2">
           <li v-for="tech in project.technologies" :key="tech"
-            class="text-xs px-2.5 py-1 rounded-full bg-cyan-50 text-cyan-900 border border-cyan-100">
+            class="text-xs px-2.5 py-1 rounded-full bg-[#3A6FF7]/10 text-[#1F1F1F] border border-[#3A6FF7]/20">
             {{ tech }}
           </li>
         </ul>
@@ -38,40 +38,42 @@
     </div>
 
     <!-- Markdown Content -->
-    <div class="mx-auto max-w-4xl px-6 py-6">
-      <div v-if="mdHtml" class="prose prose-lg prose-gray max-w-none
-               prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
+    <div class="bg-[#A0A4A8]/10">
+      <div class="mx-auto max-w-4xl px-6 py-8">
+        <div v-if="mdHtml" class="prose prose-lg prose-gray max-w-none
+               prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-[#1F1F1F]
                prose-h1:text-3xl prose-h1:mt-8 prose-h1:mb-4
                prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4
                prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
-               prose-p:text-gray-600 prose-p:leading-relaxed prose-p:mb-4
-               prose-a:text-cyan-900 prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-               prose-strong:text-gray-900 prose-strong:font-semibold
+               prose-p:text-[#A0A4A8] prose-p:leading-relaxed prose-p:mb-4
+               prose-a:text-[#3A6FF7] prose-a:no-underline hover:prose-a:underline prose-a:font-medium
+               prose-strong:text-[#1F1F1F] prose-strong:font-semibold
                prose-ul:my-4 prose-ol:my-4
-               prose-li:text-gray-600 prose-li:my-2
-               prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:text-gray-800 prose-code:before:content-none prose-code:after:content-none
-               prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-4 prose-pre:rounded-xl prose-pre:overflow-x-auto
-               prose-blockquote:border-l-4 prose-blockquote:border-cyan-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-600
+               prose-li:text-[#A0A4A8] prose-li:my-2
+               prose-code:bg-[#A0A4A8]/10 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:text-[#1F1F1F] prose-code:before:content-none prose-code:after:content-none
+               prose-pre:bg-[#1F1F1F] prose-pre:text-white prose-pre:p-4 prose-pre:rounded-xl prose-pre:overflow-x-auto
+               prose-blockquote:border-l-4 prose-blockquote:border-[#3A6FF7] prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-[#A0A4A8]
                prose-img:rounded-xl prose-img:shadow-md prose-img:my-8
-               prose-hr:my-8 prose-hr:border-gray-200
-               bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8" v-html="mdHtml" />
+               prose-hr:my-8 prose-hr:border-[#A0A4A8]/30
+               bg-white rounded-2xl border border-[#A0A4A8]/30 shadow-sm p-8 md:p-12" v-html="mdHtml" />
 
-      <div v-else-if="mdError" class="bg-white rounded-2xl border border-gray-200 p-6 text-center">
-        <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">Content Not Found</h3>
-        <p class="text-sm text-gray-600">Unable to load project details for this project.</p>
-      </div>
+        <div v-else-if="mdError" class="bg-white rounded-2xl border border-[#A0A4A8]/30 p-8 text-center">
+          <svg class="w-16 h-16 text-[#A0A4A8] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="text-lg font-semibold text-[#1F1F1F] mb-2">Content Not Found</h3>
+          <p class="text-sm text-[#A0A4A8]">Unable to load project details for this project.</p>
+        </div>
 
-      <div v-else class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8">
-        <div class="animate-pulse space-y-4">
-          <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-          <div class="h-4 bg-gray-200 rounded w-full"></div>
-          <div class="h-4 bg-gray-200 rounded w-5/6"></div>
-          <div class="h-4 bg-gray-200 rounded w-full"></div>
-          <div class="h-4 bg-gray-200 rounded w-4/5"></div>
+        <div v-else class="bg-white rounded-2xl border border-[#A0A4A8]/30 shadow-sm p-8 md:p-12">
+          <div class="animate-pulse space-y-4">
+            <div class="h-4 bg-[#A0A4A8]/25 rounded w-3/4"></div>
+            <div class="h-4 bg-[#A0A4A8]/25 rounded w-full"></div>
+            <div class="h-4 bg-[#A0A4A8]/25 rounded w-5/6"></div>
+            <div class="h-4 bg-[#A0A4A8]/25 rounded w-full"></div>
+            <div class="h-4 bg-[#A0A4A8]/25 rounded w-4/5"></div>
+          </div>
         </div>
       </div>
     </div>

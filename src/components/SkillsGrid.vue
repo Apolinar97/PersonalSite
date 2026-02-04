@@ -8,7 +8,7 @@
                  transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:scale-[1.03]" :aria-label="skill.label" role="img">
                 <img :src="skill.iconUrl" :alt="skill.label" class="h-full w-full object-contain" loading="lazy" decoding="async" /> 
             </div>
-            <span class="text-xs font-medium tracking-wide uppercase text-slate-600">{{ skill.label }}</span>
+            <span class="text-xs font-medium tracking-wide uppercase text-[#A0A4A8]">{{ skill.label }}</span>
         </li>
     </ul>
     </section>

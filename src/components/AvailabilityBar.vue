@@ -1,16 +1,16 @@
 <template>
   <section
-    class="rounded-2xl border border-cyan-100 bg-cyan-50/70 p-4 sm:p-5
+    class="rounded-2xl border border-[#3A6FF7]/20 bg-[#3A6FF7]/10 p-4 sm:p-5
            flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
     aria-label="Availability"
   >
     <div class="flex items-center gap-3">
       <span
-        class="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-900
-               ring-1 ring-emerald-100 px-3 py-1 text-sm font-medium"
+        class="inline-flex items-center gap-2 rounded-full bg-white text-[#1F1F1F]
+               ring-1 ring-[#3A6FF7]/20 px-3 py-1 text-sm font-medium"
       >
         <!-- green dot -->
-        <span class="h-2.5 w-2.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
+        <span class="h-2.5 w-2.5 rounded-full bg-[#3A6FF7]" aria-hidden="true"></span>
         Open for hire
       </span>
     </div>
@@ -20,14 +20,14 @@
       <span
         v-for="r in roles"
         :key="r"
-        class="text-xs px-2.5 py-1 rounded-full bg-white text-cyan-900 ring-1 ring-cyan-100"
+        class="text-xs px-2.5 py-1 rounded-full bg-white text-[#1F1F1F] ring-1 ring-[#A0A4A8]/30"
       >
         {{ r }}
       </span>
 
       <span
         v-if="location"
-        class="text-xs px-2.5 py-1 rounded-full bg-white text-cyan-900 ring-1 ring-cyan-100 inline-flex items-center gap-1.5"
+        class="text-xs px-2.5 py-1 rounded-full bg-white text-[#1F1F1F] ring-1 ring-[#A0A4A8]/30 inline-flex items-center gap-1.5"
       >
         <!-- pin icon -->
         <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
