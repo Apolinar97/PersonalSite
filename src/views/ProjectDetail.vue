@@ -16,11 +16,18 @@
         </RouterLink>
 
         <!-- Project Title -->
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#1F1F1F] mb-4">
-          {{ project.projectName }}
-        </h1>
+        <div class="mb-4">
+          <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#1F1F1F]">
+            {{ project.projectName }}
+          </h1>
+          <p v-if="project.writeupFirstWritten || project.writeupLastUpdated" class="mt-2 text-xs text-[#A0A4A8]">
+            <span v-if="project.writeupFirstWritten">First written: {{ formatDate(project.writeupFirstWritten) }}</span>
+            <span v-if="project.writeupFirstWritten && project.writeupLastUpdated" class="mx-2">•</span>
+            <span v-if="project.writeupLastUpdated">Last updated: {{ formatDate(project.writeupLastUpdated) }}</span>
+          </p>
+        </div>
 
-        <p v-if="project.description" class="text-sm text-[#A0A4A8] mb-4">
+        <p v-if="project.description" class="text-sm text-[#A0A4A8] mb-3">
           <span class="inline-flex items-center rounded-full border border-[#3A6FF7]/20 bg-[#3A6FF7]/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#1F1F1F]">
             TL;DR
           </span>
@@ -136,4 +143,13 @@ const mdHtml = computed(() =>
   mdRaw.value ? md.render(mdRaw.value) : ''
 );
 
+const formatDate = (value) => {
+  const d = new Date(value)
+  if (Number.isNaN(d.getTime())) return value
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  }).format(d)
+}
 </script>

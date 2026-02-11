@@ -8,7 +8,7 @@
       </h1>
 
       <p class="text-base sm:text-lg md:text-xl text-[#A0A4A8] max-w-xl md:max-w-2xl">
-        A backend and data‑driven developer currently expanding my skills into data
+        A developer currently expanding my skills into data
         engineering.
       </p>
 
@@ -35,7 +35,8 @@
     </div>
 
     <!-- Divider -->
-    <div class="mt-6 md:mt-7 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-[#3A6FF7]/30 to-transparent"></div>
+    <div class="mt-6 md:mt-7 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-[#3A6FF7]/30 to-transparent">
+    </div>
 
     <!-- SKILLS -->
     <SkillsGrid class="mt-5 md:mt-6" :items="skills" />
@@ -52,6 +53,6 @@ const skills = [
   { label: 'SQL Server', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg' },
   { label: 'Power BI', iconUrl: 'https://logo.svgcdn.com/logos/microsoft-power-bi.svg' },
   { label: "Git", iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
-  { label: "Apache Airflow", iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original-wordmark.svg' }
+  // { label: "Apache Airflow", iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original-wordmark.svg' }
 ]
 </script>

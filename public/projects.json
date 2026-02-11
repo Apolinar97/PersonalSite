@@ -1,14 +1,16 @@
 [
   {
-    "slug": "ecommerce-etl-pipeline",
-    "project_name": "E-Commerce ETL Pipeline",
-    "description": "An end-to-end ETL pipeline for processing e-commerce data, including data extraction, transformation, and loading into a data warehouse.",
+    "slug": "etl-pipeline-aws",
+    "project_name": "ETL Pipeline on AWS",
+    "description": "Project Idea, to build an End-To-End ETL pipline on AWS",
     "technologies": [
       "TBD"
     ],
     "project_stage": "idea",
     "repository_url": "",
     "writeup_file": "ecommerce-etl-pipeline.md",
+    "writeup_first_written": "2026-02-10",
+    "writeup_last_updated": "2026-02-10",
     "project_last_updated": "2026-01-31"
   },
   {
@@ -25,6 +27,8 @@
     "project_stage": "live",
     "repository_url": "https://github.com/Apolinar97/PersonalSite",
     "writeup_file": "personal-portfolio-site.md",
+    "writeup_first_written": "2026-02-02",
+    "writeup_last_updated": "2026-02-09",
     "project_last_updated": "2026-02-10"
   }
 ]

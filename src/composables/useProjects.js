@@ -54,8 +54,20 @@ export function useProjects() {
         const repositoryUrl = String(projectData.repository_url ?? '').trim()
         const slug = String(projectData.slug ?? '').trim()
         const projectStage = String(projectData.project_stage ?? '').trim()
+        const writeupFirstWritten = String(projectData.writeup_first_written ?? '').trim()
+        const writeupLastUpdated = String(projectData.writeup_last_updated ?? '').trim()
         const projectLastUpdated = String(projectData.project_last_updated ?? '').trim()
-        return { projectName, description, technologies, repositoryUrl, slug, projectStage, projectLastUpdated }
+        return {
+            projectName,
+            description,
+            technologies,
+            repositoryUrl,
+            slug,
+            projectStage,
+            writeupFirstWritten,
+            writeupLastUpdated,
+            projectLastUpdated
+        }
     }
     const normalizeProjectDataList = (projectDataList) => {
         const projectArr = Array.isArray(projectDataList) ? projectDataList : []
