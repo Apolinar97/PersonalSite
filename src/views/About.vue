@@ -14,7 +14,7 @@ import headshot from '@/assets/apolinar-headshot.jpg'
             Hi, I’m Apolinar — <span class="text-[#3A6FF7]">I build data solutions</span>.
           </h1>
           <p class="text-base md:text-lg text-[#A0A4A8]">
-            I'm a data‑focused developer passionate about building solutions and solving meaningful problems. I have 3+
+            I'm a data focused developer passionate about building solutions and solving meaningful problems. I have 3+
             years of experience working with data technologies and modern development practices.
           </p>
         </div>
@@ -22,7 +22,7 @@ import headshot from '@/assets/apolinar-headshot.jpg'
         <div class="space-y-4">
           <p class="text-base md:text-lg leading-7">
             Working as a developer on a small team gave me the chance to wear many hats. That environment introduced me
-            to data‑centered projects, and I quickly became fascinated by how data shapes the way organizations make
+            to data heavy projects, and I quickly became fascinated by how data shapes the way organizations make
             informed decisions. Through that work, I gained exposure to tools like Power BI and concepts such as data
             modeling and ETL, which ultimately inspired me to pivot my career toward the data space
           </p>
@@ -34,7 +34,7 @@ import headshot from '@/assets/apolinar-headshot.jpg'
           </p>
           <p class="text-base md:text-lg leading-7">
             Right now, I’m studying for the AWS Certified Data Engineer – Associate certification and building projects
-            using cloud infrastructure. Stay tuned on my site as I continue to share new projects and write about what
+          to stay current with best practices in data engineering. Stay tuned on my site as I continue to share new projects and write about what
             I’m learning.
           </p>
         </div>
@@ -58,11 +58,11 @@ import headshot from '@/assets/apolinar-headshot.jpg'
         </div>
         <div
           class="mt-4 rounded-2xl border border-[#3A6FF7]/20 bg-white/90 p-3 text-left text-sm text-[#1F1F1F] shadow-sm">
-          <p class="text-[11px] uppercase tracking-[0.2em] text-[#3A6FF7] font-semibold">TLDR</p>
+          <p class="text-[11px] uppercase tracking-[0.2em] text-[#3A6FF7] font-semibold">TL;DR</p>
           <div class="mt-2 space-y-1.5">
-            <p><span class="font-semibold text-[#1F1F1F]">Experience:</span> 3+ years in data-focused development.</p>
-            <p><span class="font-semibold text-[#1F1F1F]">Education:</span> B.S. Computer Science, CSUSM.</p>
-            <p><span class="font-semibold text-[#1F1F1F]">Now:</span> AWS Data Engineer cert + cloud projects.</p>
+            <p><span class="font-semibold text-[#1F1F1F]">Experience:</span> <span class="rounded-sm bg-[#3A6FF7]/15 px-1 py-[2px]">3+ years in development.</span></p>
+            <p><span class="font-semibold text-[#1F1F1F]">Education:</span> <span class="rounded-sm bg-[#3A6FF7]/15 px-1 py-[2px]">B.S. Computer Science, CSUSM.</span></p>
+            <p><span class="font-semibold text-[#1F1F1F]">Now:</span> <span class="rounded-sm bg-[#3A6FF7]/15 px-1 py-[2px]">AWS Data Engineer cert + cloud projects.</span></p>
           </div>
         </div>
       </figure>

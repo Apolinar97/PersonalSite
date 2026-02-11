@@ -1,6 +1,10 @@
 <template>
-  <article class="group h-full rounded-2xl border border-[#A0A4A8]/30 bg-white p-5 transition
+  <article class="group h-full rounded-2xl border border-[#A0A4A8]/30 bg-white p-5 transition overflow-hidden
            hover:shadow-md focus-within:shadow-md hover:-translate-y-0.5 focus-within:-translate-y-0.5">
+    <div v-if="stageMeta"
+      :class="['-mx-5 -mt-5 mb-4 px-5 py-2 text-[11px] uppercase tracking-[0.2em] font-semibold border-b', stageMeta.className]">
+      {{ stageMeta.label }}
+    </div>
     <h3 class="text-lg font-semibold text-[#1F1F1F]">
       {{ project.projectName }}
     </h3>
@@ -47,7 +51,6 @@
 import { computed } from 'vue'
 
 const props = defineProps({
-  // matches your normalized shape from useProjects()
   project: {
     type: Object,
     required: true,
@@ -55,9 +58,38 @@ const props = defineProps({
   }
 })
 
-// keep cards tidy on long descriptions
 const truncated = computed(() => {
   const s = String(props.project?.description || '')
   return s.length > 160 ? s.slice(0, 160) + '…' : s
+})
+
+const stageMeta = computed(() => {
+  const stage = String(props.project?.projectStage || '').trim()
+  if (!stage) return null
+  const map = {
+    idea: {
+      label: 'Idea',
+      className: 'text-[#2F5FE0] bg-[#3A6FF7]/10 border-[#3A6FF7]/20'
+    },
+    in_progress: {
+      label: 'In Progress',
+      className: 'text-[#B6422E] bg-[#F0B9AE]/35 border-[#E39A8B]/45'
+    },
+    live: {
+      label: 'Live',
+      className: 'text-[#217A4B] bg-[#8ED3B0]/30 border-[#74C8A0]/40'
+    },
+    paused: {
+      label: 'Paused',
+      className: 'text-[#6B4BC7] bg-[#BFA8F0]/28 border-[#A98AE6]/40'
+    }
+  }
+  if (!map[stage]) {
+    return {
+      label: `Unknown stage: ${stage.replace(/_/g, ' ')}`,
+      className: 'text-[#8A6A00] bg-[#F4C95D]/35 border-[#E3B64B]/40'
+    }
+  }
+  return map[stage]
 })
 </script>

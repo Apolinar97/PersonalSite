@@ -4,12 +4,10 @@
     "project_name": "E-Commerce ETL Pipeline",
     "description": "An end-to-end ETL pipeline for processing e-commerce data, including data extraction, transformation, and loading into a data warehouse.",
     "technologies": [
-      "Python",
-      "Pandas",
-      "SQL",
-      "Airflow"
+      "TBD"
     ],
-    "repository_url": "https://github.com/Apolinar97/ecommerce-etl-pipeline",
+    "project_stage": "idea",
+    "repository_url": "",
     "writeup_file": "ecommerce-etl-pipeline.md",
     "project_last_updated": "2026-01-31"
   },
@@ -20,10 +18,13 @@
     "technologies": [
       "Vue",
       "Vite",
-      "Tailwind CSS"
+      "JavaScript",
+      "Tailwind CSS",
+      "Vercel"
     ],
-    "repository_url": "https://github.com/Apolinar97/personal_site",
+    "project_stage": "live",
+    "repository_url": "https://github.com/Apolinar97/PersonalSite",
     "writeup_file": "personal-portfolio-site.md",
-    "project_last_updated": "2026-02-01"
+    "project_last_updated": "2026-02-10"
   }
 ]

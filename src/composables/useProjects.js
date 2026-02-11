@@ -53,8 +53,9 @@ export function useProjects() {
             : []
         const repositoryUrl = String(projectData.repository_url ?? '').trim()
         const slug = String(projectData.slug ?? '').trim()
+        const projectStage = String(projectData.project_stage ?? '').trim()
         const projectLastUpdated = String(projectData.project_last_updated ?? '').trim()
-        return { projectName, description, technologies, repositoryUrl, slug, projectLastUpdated }
+        return { projectName, description, technologies, repositoryUrl, slug, projectStage, projectLastUpdated }
     }
     const normalizeProjectDataList = (projectDataList) => {
         const projectArr = Array.isArray(projectDataList) ? projectDataList : []
@@ -83,12 +84,10 @@ export function useProjects() {
             if (!projectDataUrl) {
                 throw new Error('Project data URL is not defined')
             }
-
             const freshData = await fetchJson(projectDataUrl)
             const normalizedData = normalizeProjectDataList(freshData)
             projects.value = normalizedData
             writeCache(normalizedData)
-
         }
         catch (err) {
             console.error('Fetch failed for project data:', err)
@@ -96,11 +95,8 @@ export function useProjects() {
         } finally {
             loading.value = false
         }
-
     }
     //TODO: filters
-
-    //initial load
     loadProjects()
     return {
         projects,
