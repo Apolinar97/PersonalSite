@@ -1,16 +1,20 @@
 [
   {
-    "slug": "etl-pipeline-aws",
-    "project_name": "ETL Pipeline on AWS",
-    "description": "Project Idea, to build an End-To-End ETL pipline on AWS",
+    "slug": "SDPipe",
+    "project_name": "SDPipe",
+    "description": "End to End ELT Pipeline for San Diego Collision Data.",
     "technologies": [
-      "TBD"
+      "Python",
+      "DBT",
+      "AWS S3",
+      "AWS Lambda",
+      "PostgreSQL"
     ],
-    "project_stage": "idea",
-    "repository_url": "",
+    "project_stage": "in_progress",
+    "repository_url": "https://github.com/Apolinar97/SDPipe",
     "writeup_file": "ecommerce-etl-pipeline.md",
     "writeup_first_written": "2026-02-10",
-    "writeup_last_updated": "2026-02-10",
+    "writeup_last_updated": "2026-03-02",
     "project_last_updated": "2026-01-31"
   },
   {
