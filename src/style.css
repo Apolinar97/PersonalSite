@@ -1,2 +1,36 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #1F1F1F;
+  --color-secondary: #A0A4A8;
+  --color-accent: #3A6FF7;
+  --color-accent-hover: #2F5FE0;
+
+  --color-stage-progress-text: #B6422E;
+  --color-stage-progress-bg: #F0B9AE;
+  --color-stage-progress-border: #E39A8B;
+
+  --color-stage-live-text: #217A4B;
+  --color-stage-live-bg: #8ED3B0;
+  --color-stage-live-border: #74C8A0;
+
+  --color-stage-paused-text: #6B4BC7;
+  --color-stage-paused-bg: #BFA8F0;
+  --color-stage-paused-border: #A98AE6;
+
+  --color-stage-default-text: #8A6A00;
+  --color-stage-default-bg: #F4C95D;
+  --color-stage-default-border: #E3B64B;
+}
+
+/* Route transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}

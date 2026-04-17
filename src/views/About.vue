@@ -2,12 +2,12 @@
   <section class="mx-auto max-w-6xl px-6 py-16">
     <div class="mt-8 md:mt-10 grid gap-8 md:gap-12 md:grid-cols-[minmax(0,1fr)_300px] items-start">
       <!-- LEFT: Intro Text -->
-      <div class="max-w-prose text-[#1F1F1F] space-y-5">
+      <div class="max-w-prose text-primary space-y-5">
         <div class="space-y-2">
-          <p class="text-xs uppercase tracking-[0.2em] text-[#3A6FF7] font-semibold">Developer • data & analytics</p>
-          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-[#1F1F1F] leading-tight
-                   border-l-4 border-[#3A6FF7] pl-3">
-            Hi, I’m Apolinar — <span class="text-[#3A6FF7]">I build data solutions</span>.
+          <p class="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Developer • data & analytics</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-primary leading-tight
+                   border-l-4 border-accent pl-3">
+            Hi, I’m Apolinar — <span class="text-accent">I build data solutions</span>.
           </h1>
         </div>
 
@@ -38,10 +38,10 @@
       <figure class="justify-self-center md:justify-self-end md:self-start md:order-last">
         <div class="relative">
           <div
-            class="absolute -inset-3 rounded-3xl bg-gradient-to-br from-[#3A6FF7]/15 via-white to-[#A0A4A8]/20 blur-sm">
+            class="absolute -inset-3 rounded-3xl bg-gradient-to-br from-accent/15 via-white to-secondary/20 blur-sm">
           </div>
           <div class="relative w-40 h-52 sm:w-48 sm:h-60 md:w-[300px] md:h-[375px]
-                 overflow-hidden rounded-3xl shadow-md ring-2 ring-[#A0A4A8]/30 bg-white">
+                 overflow-hidden rounded-3xl shadow-md ring-2 ring-secondary/30 bg-white">
             <img :src="headshot" srcset="
               /src/assets/apolinar-headshot.jpg 700w,
               /src/assets/apolinar-headshot.jpg 350w
@@ -51,15 +51,15 @@
           </div>
         </div>
         <div
-          class="mt-4 rounded-2xl border border-[#3A6FF7]/20 bg-white/90 p-3 text-left text-sm text-[#1F1F1F] shadow-sm">
-          <p class="text-[11px] uppercase tracking-[0.2em] text-[#3A6FF7] font-semibold">TL;DR</p>
+          class="mt-4 rounded-2xl border border-accent/20 bg-white/90 p-3 text-left text-sm text-primary shadow-sm">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">TL;DR</p>
           <div class="mt-2 space-y-1.5">
-            <p><span class="font-semibold text-[#1F1F1F]">Experience:</span> <span
-                class="rounded-sm bg-[#3A6FF7]/15 px-1 py-[2px]">3+ years in development.</span></p>
-            <p><span class="font-semibold text-[#1F1F1F]">Education:</span> <span
-                class="rounded-sm bg-[#3A6FF7]/15 px-1 py-[2px]">B.S. Computer Science, CSUSM.</span></p>
-            <p><span class="font-semibold text-[#1F1F1F]">Now:</span> <span
-                class="rounded-sm bg-[#3A6FF7]/15 px-1 py-[2px]">AWS Data Engineer cert + cloud projects.</span></p>
+            <p><span class="font-semibold text-primary">Experience:</span> <span
+                class="rounded-sm bg-accent/15 px-1 py-[2px]">3+ years in development.</span></p>
+            <p><span class="font-semibold text-primary">Education:</span> <span
+                class="rounded-sm bg-accent/15 px-1 py-[2px]">B.S. Computer Science, CSUSM.</span></p>
+            <p><span class="font-semibold text-primary">Now:</span> <span
+                class="rounded-sm bg-accent/15 px-1 py-[2px]">AWS Data Engineer cert + cloud projects.</span></p>
           </div>
         </div>
       </figure>
