@@ -98,6 +98,12 @@ const { projects } = useProjects();
 const route = useRoute();
 const project = computed(() => projects.value.find(p => p.slug === route.params.slug));
 
+watchEffect(() => {
+  if (project.value) {
+    document.title = `${project.value.projectName} | Apolinar Camacho`
+  }
+})
+
 const mdFiles = import.meta.glob('/src/content/projects/*.md', { as: 'raw' });
 
 const mdRaw = ref('');
