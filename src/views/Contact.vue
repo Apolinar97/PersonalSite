@@ -19,7 +19,7 @@ async function copyEmail() {
 
 <template>
   <section class="relative mx-auto max-w-6xl px-6 py-16">
-    <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-accent/10 to-transparent"></div>
+    <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-accent/10 to-transparent animate-fade-in"></div>
 
     <header class="max-w-prose">
       <p class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Contact</p>
@@ -30,7 +30,7 @@ async function copyEmail() {
         Happy to chat about roles, collaboration, or data-focused projects.
       </p>
 
-      <div class="mt-3 h-1.5 w-28 rounded-full bg-gradient-to-r from-primary to-accent"></div>
+      <div class="mt-3 h-1.5 w-28 rounded-full bg-gradient-to-r from-primary to-accent animate-fade-in"></div>
     </header>
 
     

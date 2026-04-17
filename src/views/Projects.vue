@@ -5,7 +5,7 @@
       <h1 class="mt-2 text-4xl md:text-5xl font-extrabold tracking-tight text-primary">
         Projects
       </h1>
-      <div class="mt-3 h-1.5 w-28 rounded-full bg-gradient-to-r from-primary to-accent"></div>
+      <div class="mt-3 h-1.5 w-28 rounded-full bg-gradient-to-r from-primary to-accent animate-fade-in"></div>
     </header>
     <ul v-if="loading" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <li v-for="n in 6" :key="n">
