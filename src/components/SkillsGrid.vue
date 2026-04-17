@@ -1,16 +1,14 @@
 <template>
     <section  aria-labelledby="skills-title">
-        <h2 id="skills-title" class="text-2xl font-semibold mb-6 text-center">Skills & Tools</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
-        
-        <li v-for="skill in items" :key="skill.label" class="group flex flex-col items-center gap-3 text-center">
-            <div class="h-20 w-20 flex items-center justify-center
-                 transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:scale-[1.03]" :aria-label="skill.label" role="img">
-                <img :src="skill.iconUrl" :alt="skill.label" class="h-full w-full object-contain" loading="lazy" decoding="async" /> 
-            </div>
-            <span class="text-xs font-medium tracking-wide uppercase text-secondary">{{ skill.label }}</span>
-        </li>
-    </ul>
+        <p class="mb-5 text-xs uppercase tracking-[0.2em] text-accent font-semibold text-center">What I Work With</p>
+        <ul class="flex flex-wrap justify-center gap-3">
+            <li v-for="skill in items" :key="skill.label"
+                class="group inline-flex items-center gap-3 rounded-full border border-secondary/30 bg-white
+                       px-5 py-3 shadow-sm transition hover:shadow-md hover:-translate-y-0.5">
+                <img :src="skill.iconUrl" :alt="skill.label" class="h-7 w-7 object-contain" loading="lazy" decoding="async" role="img" />
+                <span class="text-base font-medium text-primary">{{ skill.label }}</span>
+            </li>
+        </ul>
     </section>
     
 </template>

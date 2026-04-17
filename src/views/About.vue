@@ -20,7 +20,7 @@
             modeling and ETL, which ultimately inspired me to pivot my career toward the data space
           </p>
           <p class="text-base md:text-lg leading-7">
-            Today, I'm actively pursuing a data engineer/analyst career path. I enjoy learning new concepts,
+            Today, I’m actively pursuing a data engineer/analyst career path. I enjoy learning new concepts,
             experimenting with emerging technologies, and building solutions that turn raw information into meaningful
             insights. I’m currently based in San Diego, CA, and I hold a degree in Computer Science from California
             State University San Marcos.
