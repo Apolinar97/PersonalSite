@@ -153,12 +153,16 @@ const mdHtml = computed(() =>
 );
 
 const formatDate = (value) => {
-  const d = new Date(value)
+  const d = new Date(`${value}T00:00:00`)
   if (Number.isNaN(d.getTime())) return value
-  return new Intl.DateTimeFormat('en-US', {
+  const date = new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
   }).format(d)
+  const tz = new Intl.DateTimeFormat('en-US', { timeZoneName: 'short' })
+    .formatToParts(d)
+    .find(p => p.type === 'timeZoneName')?.value ?? ''
+  return tz ? `${date} ${tz}` : date
 }
 </script>
