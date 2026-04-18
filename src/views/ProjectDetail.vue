@@ -1,5 +1,7 @@
 <template>
-  <NotFound v-if="!project" />
+  <ProjectDetailSkeleton v-if="loading && !project" />
+
+  <NotFound v-else-if="!project" />
 
   <article v-else class="min-h-screen bg-white">
     <!-- Hero Section -->
@@ -93,8 +95,9 @@ import { useRoute } from 'vue-router';
 import MarkdownIt from 'markdown-it';
 import { useProjects } from '@/composables/useProjects';
 import NotFound from './NotFound.vue';
+import ProjectDetailSkeleton from '@/components/ProjectDetailSkeleton.vue';
 
-const { projects } = useProjects();
+const { projects, loading } = useProjects();
 const route = useRoute();
 const project = computed(() => projects.value.find(p => p.slug === route.params.slug));
 
