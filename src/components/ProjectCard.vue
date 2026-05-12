@@ -75,6 +75,10 @@ const stageMeta = computed(() => {
       label: 'In Progress',
       className: 'text-stage-progress-text bg-stage-progress-bg/35 border-stage-progress-border/45'
     },
+    mvp: {
+      label: 'MVP',
+      className: 'text-stage-mvp-text bg-stage-mvp-bg/30 border-stage-mvp-border/40'
+    },
     live: {
       label: 'Live',
       className: 'text-stage-live-text bg-stage-live-bg/30 border-stage-live-border/40'

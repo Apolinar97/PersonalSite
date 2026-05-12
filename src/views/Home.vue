@@ -69,6 +69,7 @@
                   :class="{
                     'text-accent-hover bg-accent/10': p.projectStage === 'idea',
                     'text-stage-progress-text bg-stage-progress-bg/35': p.projectStage === 'in_progress',
+                    'text-stage-mvp-text bg-stage-mvp-bg/30': p.projectStage === 'mvp',
                     'text-stage-live-text bg-stage-live-bg/30': p.projectStage === 'live',
                     'text-stage-paused-text bg-stage-paused-bg/28': p.projectStage === 'paused',
                   }">
